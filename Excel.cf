@@ -1,0 +1,32 @@
+FEqual . Formula ::= "=" Exp ;
+
+EEqual . Exp    ::= Exp "=" Exp1 ;
+EGt . Exp       ::= Exp ">" Exp1 ;
+ELt . Exp       ::= Exp "<" Exp1 ;
+EGtEq . Exp     ::= Exp ">=" Exp1 ;
+ELtEq . Exp     ::= Exp "<=" Exp1 ;
+ENotEqual . Exp ::= Exp "<>" Exp1 ;
+
+EConcat . Exp1 ::= Exp1 "&" Exp2 ;
+
+EAdd . Exp2 ::= Exp2 "+" Exp3 ;
+ESub . Exp2 ::= Exp2 "-" Exp3 ;
+
+EMul . Exp3 ::= Exp3 "*" Exp4 ;
+EDiv . Exp3 ::= Exp3 "/" Exp4 ;
+
+ERange . Exp4 ::= Exp4 ":" Exp5 ;
+ENeg . Exp4   ::= "-" Exp5 ;
+
+EFun . Exp5    ::= FunctionName "(" [Exp] ")" ;
+EInt . Exp5    ::= Integer ;
+EStr . Exp5    ::= String ;
+ECell . Exp5   ::= Cell ;
+EDouble . Exp5 ::= Double ;
+
+coercions Exp 5 ;
+
+separator Exp "," ;
+
+token Cell (upper+ digit+) ;
+token FunctionName (upper+) ;

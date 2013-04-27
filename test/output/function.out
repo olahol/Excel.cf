@@ -1,0 +1,10 @@
+
+Parse Successful!
+
+[Abstract Syntax]
+
+FEqual (EAdd (ECell (Cell "A1")) (ECell (Cell "A2")))
+
+[Linearized tree]
+
+= A1 + A2

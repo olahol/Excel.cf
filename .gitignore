@@ -1,0 +1,10 @@
+*.swp
+*.hs
+*.tex
+*.txt
+*.x
+Makefile
+*.y
+*.o
+*.hi
+TestExcel
